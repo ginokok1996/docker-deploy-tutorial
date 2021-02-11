@@ -14,10 +14,7 @@ services:
 
   # PHP Service
   php:
-    build: ./.docker/php
-    working_dir: /var/www/php
-    volumes:
-      - ./src:/var/www/php
+    build: .
     depends_on:
       - mysql
 
