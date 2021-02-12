@@ -23,19 +23,10 @@
     <p class="center">hello world</p>
     <!--    <a href="other-page.html">Go to other page</a>-->
     <?php
-    $connection = new PDO('mysql:host=127.0.0.1:3306;dbname=env-2701-1613121431803-docker-db', 'admin-142839', 'rOElFw!@YCHpx221');
-    $query      = $connection->query("SELECT TABLE_NAME FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'demo'");
-    $tables     = $query->fetchAll(PDO::FETCH_COLUMN);
-
-    if (empty($tables)) {
-        echo '<p class="center">There are no tables in database <code>demo</code>.</p>';
+    if (getenv('APP_ENV')) {
+        $connection = new PDO('mysql:host=mysql;dbname=env-2701-1613121431803-docker-db', 'admin-142839', 'rOElFw!@YCHpx221');
     } else {
-        echo '<p class="center">Database <code>demo</code> contains the following tables:</p>';
-        echo '<ul class="center">';
-        foreach ($tables as $table) {
-            echo "<li>{$table}</li>";
-        }
-        echo '</ul>';
+        $connection = new PDO('mysql:host=127.0.0.1:3306;dbname=env-2701-1613121431803-docker-db', 'admin-142839', 'rOElFw!@YCHpx221');
     }
     ?>
 </body>
