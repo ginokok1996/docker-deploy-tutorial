@@ -21,7 +21,7 @@
 
 <body>
     <p class="center">hello world</p>
-<!--    <a href="other-page.html">Go to other page</a>-->
+    <!--    <a href="other-page.html">Go to other page</a>-->
     <?php
     $connection = new PDO('mysql:host=mysql;dbname=demo;charset=utf8', 'root', 'root');
     $query      = $connection->query("SELECT TABLE_NAME FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'demo'");
