@@ -19,9 +19,9 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     environment:
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=demo
-      - MYSQL_USER=db_user
-      - MYSQL_PASSWORD=root
+      - MYSQL_DATABASE=env-2699-1613118092851-docker-deploy-tutorial-db
+      - MYSQL_USER=admin-651043
+      - MYSQL_PASSWORD=Z5iui8vP@5fGiiza
     volumes:
       - ./.docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf.ro
       - mysqldata:/var/lib/mysql

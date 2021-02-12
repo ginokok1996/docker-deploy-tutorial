@@ -23,7 +23,7 @@
     <p class="center">hello world</p>
     <!--    <a href="other-page.html">Go to other page</a>-->
     <?php
-    $connection = new PDO('mysql:host=mysql;dbname=demo;charset=utf8', 'root', 'root');
+    $connection = new PDO('mysql:host=mysql;dbname=env-2699-1613118092851-docker-deploy-tutorial-db;charset=utf8', 'admin-651043', 'Z5iui8vP@5fGiiza');
     $query      = $connection->query("SELECT TABLE_NAME FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'demo'");
     $tables     = $query->fetchAll(PDO::FETCH_COLUMN);
 
