@@ -21,13 +21,15 @@
 
 <body>
     <p class="center">hello world</p>
-    <!--    <a href="other-page.html">Go to other page</a>-->
     <?php
     if (getenv('APP_ENV')) {
-        $connection = new PDO('mysql:host=mysql;dbname=env-2701-1613121431803-docker-db', 'admin-142839', 'rOElFw!@YCHpx221');
+        $host = 'mysql';
     } else {
-        $connection = new PDO('mysql:host=127.0.0.1:3306;dbname=env-2701-1613121431803-docker-db', 'admin-142839', 'rOElFw!@YCHpx221');
+        $host = '127.0.0.1:3306';
     }
+
+    $connection = new PDO("mysql:host={$host};dbname=env-2862-1613676344282-docker-uitleg-db", 'admin-904241', '1234567a');
+
     ?>
 </body>
 
